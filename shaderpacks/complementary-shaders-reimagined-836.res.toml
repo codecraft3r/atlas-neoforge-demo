@@ -1,0 +1,14 @@
+[metadata]
+name = "Complementary Shaders - Reimagined"
+side = "client"
+project_url = "https://modrinth.com/mod/complementary-reimagined"
+disabled_client_oses = []
+
+[download]
+source = "modrinth"
+project_id = "HVnmMxH1"
+version = "836bPNGo"
+url = "https://cdn.modrinth.com/data/HVnmMxH1/versions/836bPNGo/ComplementaryReimagined_r5.7.1.zip"
+
+[download.hashes]
+sha512 = "840149dd8aff5d5d06d0d5a4ea83d4ea7f72eab3cb2b02de513c1f3eaa6e4627f68d9c0915b86fa37edad73cafd4648f156f373da52810cd34c67d797e0f6aef"
