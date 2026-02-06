@@ -1,0 +1,29 @@
+name: Build Atlas Pack
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+    env:
+      ATLAS_DEPLOY_KEY: ${{ secrets.ATLAS_API_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Atlas CLI
+        run: |
+          curl -fL --retry 5 --retry-delay 2 --retry-all-errors \
+            "https://atlas.nathanm.org/download/cli/latest/linux/x64" -o atlas
+          sudo install -m 0755 atlas /usr/local/bin/atlas
+          atlas --version
+
+      - name: Deploy pack
+        run: |
+          atlas deploy --channel dev --commit-hash "${GITHUB_SHA}"
