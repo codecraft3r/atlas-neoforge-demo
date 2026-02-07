@@ -8,7 +8,9 @@ modloader = "neoforge"
 modloader_version = "21.1.219"
 
 [cli]
-pack_id = "ZNFYauMePdbE09IndMSnv"
+pack_id = "XNPfVr6dWE0qaCIu9iFgP"
 hub_url = "https://atlas.nathanm.org"
 default_channel = "dev"
+
+
 
